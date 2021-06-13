@@ -1,0 +1,43 @@
+16:15:35 **** Incremental Build of configuration Nios II for project miniproject ****
+make all 
+Info: Building ../miniproject_bsp/
+D:/Quartus/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../miniproject_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../miniproject_bsp//HAL/inc -I../miniproject_bsp/ -I../miniproject_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'SendCommand':
+hello_world.c:20:2: warning: implicit declaration of function 'delay_ms' [-Wimplicit-function-declaration]
+  delay_ms(100);
+  ^
+hello_world.c: In function 'adc':
+hello_world.c:66:10: warning: initialization discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   int *p=&ADC;
+          ^
+hello_world.c:68:4: warning: assignment discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   p=&ADC;
+    ^
+hello_world.c:74:3: warning: implicit declaration of function 'division' [-Wimplicit-function-declaration]
+   division(t,&c,&d,&e,&f);
+   ^
+hello_world.c: At top level:
+hello_world.c:85:6: warning: conflicting types for 'delay_ms'
+ void delay_ms(int a)
+      ^
+hello_world.c:20:2: note: previous implicit declaration of 'delay_ms' was here
+  delay_ms(100);
+  ^
+hello_world.c: In function 'division':
+hello_world.c:104:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Info: Linking miniproject.elf
+nios2-elf-g++  -T'../miniproject_bsp//linker.x' -msys-crt0='../miniproject_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../miniproject_bsp/   -Wl,-Map=miniproject.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o miniproject.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert miniproject.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 67637392 --sidp 0x4081090 --timestamp 1619064928 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name niosiisystem --quartus_project_dir "C:/Quartus/Miniproject" --jdi C:/Quartus/Miniproject/software/miniproject_bsp/../../Miniproject.jdi --sopcinfo C:/Quartus/Miniproject/software/miniproject_bsp/../../niosiisystem.sopcinfo
+Info: (miniproject.elf) 75 KBytes program size (code + initialized data).
+Info:                   65527 KBytes free for stack + heap.
+Info: Creating miniproject.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source miniproject.elf >miniproject.objdump
+[miniproject build complete]
+
+16:15:38 Build Finished (took 3s.369ms)
+
