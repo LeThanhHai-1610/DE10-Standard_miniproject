@@ -3,33 +3,11 @@ A system using Nios II in kit DE10 to connect LCD 16x2 and potentialmeter. This 
 
 ![](RackMultipart20210616-4-8yw3gy_html_c1e65d10cb0b7e87.gif)
 
-**VIETNAM NATIONAL UNIVERSITY, HO CHI MINH CITY**
-
-HO CHI MINH UNIVERSITY OF TECHNOLOGY
-
-FACULTY OF ELECTRICAL ENGINEERING
-
-**Advanced Program**
-
----------------o0o---------------
 
 ![](RackMultipart20210616-4-8yw3gy_html_e613a5c020d72408.png)
 
-# **MICROCOMPUTER LAB**
 
-# **MINIPROJECT 1 REPORT**
 
-**Instructor: Nguyễn Trung Hiếu**
-
-**Students: Lê Thanh Hải 1851027**
-
-**Nguyễn Hoàng Tuấn 1851018**
-
-**Đặng Vũ Kim Ký 1812744**
-
-**Ho Chi Minh City, 5/5/2021**
-
-**Topic 1:**
 
 Project 1: Build a system using Nios II in kit DE10 to connect LCD 16x2. This system can do following tasks:
 
